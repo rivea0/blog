@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Inaugural Post
-categories: []
+categories: Miscellaneous
 ---
 
 > We *write* and we later *read*. We *save* and we later *retrieve*. We *store* and we later *access*. The function of memory is to keep information intact between those two events.
