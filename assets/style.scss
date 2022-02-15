@@ -21,12 +21,12 @@ html {
 }
 
 body {
-  background: #fff;
-  font-family: -system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  color: #404040;
+  background: #1c1c20;
+  font-family: system-ui, -apple-system, Roboto, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  color: #fff;
   line-height: 1.7;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 21px;
   height: 100%;
 }
 
@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: -system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: $darkerGray;
   font-weight: bold;
-
+	
   line-height: 1.7;
   margin: 1em 0 15px;
   padding: 0;
@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 42px;
   a {
     color: inherit;
   }
@@ -81,7 +81,7 @@ h3 {
 
 h4 {
   font-size: 18px;
-  color: #222;
+  color: #fff;
 }
 
 p {
@@ -94,13 +94,13 @@ table {
 
 table tr {
 	border-top: 1px solid #cccccc;
-	background-color: white;
+	background-color: #222;
 	margin: 0;
 	padding: 0;
 }
 
 table tr:nth-child(2n) {
-	background-color: #f8f8f8;
+	background-color: #1f1f1f;
 }
 
 table tr th {
@@ -148,7 +148,7 @@ table tr td :last-child {
   border-radius: 4px;
   box-sizing: border-box;
   font-size: 18px;
-  background-color: #fff3ff;
+  background-color: #1c1c20;
 }
 
 .share-box {
@@ -177,11 +177,11 @@ span[data-pullquote]:before {
 }
 
 a {
-  color: $blue;
+  color: #00a3a3;
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: $blue;
+    color: #00a3a3;
   }
 }
 
@@ -344,7 +344,7 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $darkGray;
+    color: #fff;
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
@@ -415,7 +415,7 @@ nav {
   bottom: 0;
   width: 100%;
   height: 89px;
-  background-color: $lightGray;
+  background-color: #1c1c20;
 }
 
 footer {
@@ -434,7 +434,7 @@ body:after {
 }
 
 #bar {
-    background: #000;
+    background: #1c1c20;
     height: 7px;
     background-size: cover;
     background-position: left 60%;
