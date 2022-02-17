@@ -4,26 +4,11 @@ title: About
 permalink: /about/
 ---
 
-[Reverie](https://github.com/amitmerchant1990/reverie) is a Jekyll theme which is simple and opinionated. It's actually a fork of [jekyll-now](https://github.com/barryclark/jekyll-now) with some additional features and personal touches which I've implemented to suit my needs for [my blog](https://www.amitmerchant.com).
+I took [CS50](cs50.harvard.edu/x) once, and fell in love with programming – have been learning ever since.
 
-This is a plug-and-play Jekyll theme which you can use on GitHub Pages without even setting up a local environment.
+Writing as a beginner has both advantages and disadvantages; you retain information better when you write about it, however, most of the things written might be trivial, and it may not appeal to everyone. As the site description says, this is only to keep notes to myself of the things that I want to remember. See [Inaugural Post](https://rivea0.github.io/blog/inaugural-post/).
 
-## Features
+I've been self-teaching myself for not-that-too-long, which means there might be mistakes, things that I've missed, or could've done better.
+If you find any mistakes, areas to improve, or suggestions on any of the posts, feel free to [contact](mailto:riveazero@gmail.com).
 
-- Command-line free fork-first workflow, using GitHub.com to create, customize and post to your blog
-- Fully responsive and mobile optimized base theme
-- Sass/Coffeescript support using Jekyll 2.0
-- Free hosting on your GitHub Pages user site
-- All the SEO goodies comes in-built
-- Markdown blogging
-- Syntax highlighting using Pygments
-    - [Dracula syntax theme](https://draculatheme.com/) included
-- Disqus commenting
-- Google Analytics integration
-- Fuzzy search across blog posts
-- Pagination of posts works out-of-the-box.
-- Categorize posts out-of-the box
-- RSS Feed
-- In-built sitemap
-
-Learn more about it [here](https://github.com/amitmerchant1990/reverie) on how to get started.
+Site template is based on [Reverie](https://github.com/amitmerchant1990/reverie). Licensed under [MIT](https://github.com/rivea0/blog/blob/master/LICENSE).
