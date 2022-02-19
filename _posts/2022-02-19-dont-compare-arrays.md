@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Don't Compare Arrays with `==` in JavaScript
+title: Don't Compare Arrays with == in JavaScript
 categories: JavaScript
 ---
 
