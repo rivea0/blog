@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I took [CS50](cs50.harvard.edu/x) once, and fell in love with programming – have been learning ever since.
+I [took](https://certificates.cs50.io/4523f184-15ea-48f6-9c83-f1ed5fada54f) a course called [CS50](https://cs50.harvard.edu/x) once, and fell in love with programming – have been learning ever since.
 
 Writing as a beginner has both advantages and disadvantages; you retain information better when you write about it, however, most of the things written might be trivial, and it may not appeal to everyone. As the site description says, this is only to keep notes to myself of the things that I want to remember. See [Inaugural Post](https://rivea0.github.io/blog/inaugural-post/).
 
