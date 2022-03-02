@@ -15,7 +15,7 @@ let x = [1, 3];
 let y = [1, 3];
 ```
 
-You expect something like `x == y` to be true (remember we're not using the strict equality yet as we know that they are not the same object —yes, [*arrays are objects*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)—, we're only looking if they are equal value-wise). For example, in Python, while they are not the same object in memory, these two lists would equal true:
+You expect something like `x == y` to be true (remember we're not using the strict equality yet as we know that they are not the same object —yes, [*arrays are objects*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array){:target="_blank"}—, we're only looking if they are equal value-wise). For example, in Python, while they are not the same object in memory, these two lists would equal true:
 
 ```python
 x = [1, 3]
@@ -42,4 +42,4 @@ Of course, this would not work recursively, so it would mostly be useful for sim
 
 Quite simple, but, something to keep in mind nonetheless.
 
-Also, to learn more about how the equality operator works with objects, reading about [object to primitive conversion](https://javascript.info/object-toprimitive) is a great way to spend some time learning what's going on behind the scenes.
+Also, to learn more about how the equality operator works with objects, reading about [object to primitive conversion](https://javascript.info/object-toprimitive){:target="_blank"} is a great way to spend some time learning what's going on behind the scenes.
