@@ -7,7 +7,7 @@ categories: [Python, JavaScript, C]
 When working with strings, there might come a time that you might want to check if the string starts with or ends with another given string. Luckily, JavaScript and Python have their own built-in function to do the job, aptly named `startsWith()` & `endsWith()` in JavaScript, and `startswith()` & `endswith()` in Python. However, not to reinvent the wheel, but let's say we want to implement them our own way. Because, why not?
 
 ## Negative Indexing
-One thing that might be helpful, before we start off, is the concept of negative indexing. For example, not in all languages, but the last character of a string can be accessed with the index number -1. The second to last character will be -2, and so on. Python allows the use of negative indexes for strings (and for most [iterables](https://docs.python.org/3.9/glossary.html#term-iterable)), and JavaScript's `slice` method also allows negative indexing. These will come in handy.
+One thing that might be helpful, before we start off, is the concept of negative indexing. For example, not in all languages, but the last character of a string can be accessed with the index number -1. The second to last character will be -2, and so on. Python allows the use of negative indexes for strings (and for most [iterables](https://docs.python.org/3.9/glossary.html#term-iterable){:target="_blank"}), and JavaScript's `slice` method also allows negative indexing. These will come in handy.
 
 Python example:
 
@@ -74,7 +74,7 @@ name.slice(0, target.length) === target // true
 Slicing the original string from the start to the length of the target string, gives us the string with the same length of `target`. So, `name.slice(0, target.length)` in this case, starts from the start of the string and goes up to the 3rd index (length of `'Dav'`). We only check if the two strings are the same, and that's it.
 
 ## Dissecting the Implementations
-We have written great one-liners, and just implemented our own way to do `startsWith` and `endsWith`. Here are the functions (let's write the function names in [snake case](https://en.wikipedia.org/wiki/Snake_case) so as not to confuse ourselves with the built-in ones):
+We have written great one-liners, and just implemented our own way to do `startsWith` and `endsWith`. Here are the functions (let's write the function names in [snake case](https://en.wikipedia.org/wiki/Snake_case){:target="_blank"} so as not to confuse ourselves with the built-in ones):
 
 In Python:
 
