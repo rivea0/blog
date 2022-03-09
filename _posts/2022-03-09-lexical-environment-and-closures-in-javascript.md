@@ -116,7 +116,7 @@ This is what *closures* are about, a function that has access to its `outer` sco
 
 Here comes the enlightenment: Then, *are not all functions closures in JavaScript*?
 
-I guess the answer is [mostly yes, with an exception](https://javascript.info/new-function#closure){:target="_blank"}
+I guess the answer is [mostly yes, with an exception](https://javascript.info/new-function#closure){:target="_blank"}.
 
 If you remember the `summonItem` example, it also accesses a variable (`broomstick`) from its `outer` scope, so based on the definition, we can say that it is theoretically a closure. Though, it might be better if we don't confuse ourselves a lot because when you look up closures, most basic examples you see would be similar in spirit to `powersOfTwo`. It is nevertheless a nice thing to internalize, as it was our goal all along — to see how things work beneath the surface. It is an abstract surface of course, but good to dive into.
 
