@@ -102,7 +102,7 @@ function ends_with(string, target) {
 
 These are fine, but what about implementing the same logic another way?  Maybe, with another language? One that will help us think in lower-level.
 
-What about this one?
+My initial thought was that it would be something like this in C (spoiler: it was naive.):
 
 ```c
 #include <stdio.h>
@@ -114,19 +114,10 @@ bool starts_with(char *string, char *target) {
   for (int i = 0; i < target_length; i++) {
     if (string[i] != target[i]) {
       return false;
-	}
+	  }
   }
   return true;
 }
-```
-
-What we do in our C program is the same idea, only that we compare each character of our original string and the target string, up to the index which is `target`'s length; if any of them are not the same, we return false.
-Here is the `ends_with`:
-
-```c
-#include <stdio.h>
-#include <stdbool.h>
-#include <string.h>
 
 bool ends_with(char *string, char *target) {
   int target_length = strlen(target);
@@ -134,61 +125,77 @@ bool ends_with(char *string, char *target) {
   for (int i = 0; i < target_length; i++) {
     if (string[starting_index + i] != target[i]) {
       return false;
-	}
+	  }
   }
   return true;
 }
-
 ```
 
-We don't use negative indexing, of course, but the idea is the same. We use the `target`'s length for our starting index, so the length of our string minus the length of the target string (`strlen(string) - target.length`) is the number that we could use as our "negative" starting point. 
+However, I was [corrected](https://dev.to/pauljlucas/comment/1mj0d) that this is indeed problematic.
 
-Here's the whole code in C:
+Here is the simpler and correct versions of `starts_with` and `ends_with`:
 
 ```c
-#include <stdio.h>
+bool starts_with(char const *string, char const *target) {
+  for ( ; *target != '\0' && *target == *string; ++target, ++string );
+  return *target == '\0';
+}
+```
+
+```c
+bool ends_with(char const *string, char const *target) {
+  char const *const t0 = target;
+  for ( ; *target != '\0'; ++string, ++target ) {
+    if ( *string == '\0' ) return false;
+  }
+  for ( ; *string != '\0'; ++string );
+  size_t const t_len = (size_t)(target - t0);
+  return strcmp( string - t_len, t0 ) == 0;
+}
+```
+
+What we do in `starts_with` is the same idea, only that we compare each character of our original string and the target string until `target` ends; also handling the case if `target` is longer than `string` — in which case it would return false.
+
+In `ends_with`, we first check to see if `target` is longer than `string` (in that case, we would immediately return false). Then, using the `target`'s length (`t_len`), we compare the `string`'s end of `t_len` characters with our target string (`t0`).
+
+Here's the whole code:
+
+```c
 #include <stdbool.h>
+#include <stddef.h>
+#include <stdio.h>
 #include <string.h>
 
 // Function prototypes
-bool starts_with(char *string, char *target);
-bool ends_with(char *string, char *target);
-
+bool starts_with(char const *string, char const *target);
+bool ends_with( char const *string, char const *target );
 
 int main(void) {
-  char *str = "David";
-  char *target_end = "vid";
-  char *target_start = "D";
+  char const *str = "David";
+  char const *target_end = "vid";
+  char const *target_start = "D";
 
   // prints "true"
   printf("%s\n", starts_with(str, target_start) ? "true" : "false");
 
   // prints "true"
   printf("%s\n", ends_with(str, target_end) ? "true" : "false");
-
 }
 
-bool starts_with(char *string, char *target) {
-  int target_length = strlen(target);
-  for (int i = 0; i < target_length; i++) {
-    if (string[i] != target[i]) {
-      return false;
-	}
+bool starts_with(char const *string, char const *target) {
+  for ( ; *target != '\0' && *target == *string; ++target, ++string );
+  return *target == '\0';
+}
+
+bool ends_with( char const *string, char const *target ) {
+  char const *const t0 = target;
+  for ( ; *target != '\0'; ++string, ++target ) {
+    if ( *string == '\0' ) return false;
   }
-  return true;
+  for ( ; *string != '\0'; ++string );
+  size_t const t_len = (size_t)(target - t0);
+  return strcmp( string - t_len, t0 ) == 0;
 }
-
-bool ends_with(char *string, char *target) {
-  int target_length = strlen(target);
-  int starting_index = strlen(string) - target_length;
-  for (int i = 0; i < target_length; i++) {
-    if (string[starting_index + i] != target[i]) {
-      return false;
-	}
-  }
-  return true;
-}
-
 ```
 
 And now, time for some introspection.
