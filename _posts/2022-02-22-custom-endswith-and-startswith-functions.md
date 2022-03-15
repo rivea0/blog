@@ -131,7 +131,7 @@ bool ends_with(char *string, char *target) {
 }
 ```
 
-However, I was [corrected](https://dev.to/pauljlucas/comment/1mj0d) that this is indeed problematic.
+However, I was [corrected](https://dev.to/pauljlucas/comment/1mj0d){:target="_blank"} that this is indeed problematic.
 
 Here is the simpler and correct versions of `starts_with` and `ends_with`:
 
