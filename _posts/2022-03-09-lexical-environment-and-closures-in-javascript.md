@@ -8,7 +8,7 @@ When it feels like this is the [*worst of times* and *the age of foolishness*](h
 
 One of those things that are beneath the surface of JavaScript is the concept of Lexical Environment. If you're familiar with closures, it is something that helps you internalize what is really going on.
 
-We can think of the Lexical Environment as an object that every function, even the whole script itself, has. It not only contains the local variables and their values, but also has a reference to an **outer lexical environment**. 
+We can think of the Lexical Environment as an object that every function, code block, even the whole script itself, has. It not only contains the local variables and their values, but also has a reference to an **outer lexical environment**. 
 
 When you create a variable, let's say, something like this:
 
@@ -100,7 +100,7 @@ console.log(twoToThePower()); // 16 (2 ** 4)
 console.log(twoToThePower()); // 32 (2 ** 5)
 ```
 
-When the `powersOfTwo` is called, its Lexical Environment object is created. It now has `start` and `count`, with `outer` referencing the global Lexical Environment which has `powersOfTwo` and `twoToThePower`, as well as its own `outer` referencing `null`.
+When the `powersOfTwo` is called, a Lexical Environment is created for it. It now has `start` and `count`, and `outer` referencing the global Lexical Environment which has `powersOfTwo` and `twoToThePower`, as well as its own `outer` referencing `null`.
 
 When we call `twoToThePower` inside `console.log`, what happens is — you guessed it, a new Lexical Environment is created. Since `start` and `count` are not inside this local Lexical Environment, it follows the `outer` reference (which is the Lexical Environment of `powersOfTwo`). When it updates the `count`, it is updated inside the Lexical Environment of `powersOfTwo`. Another way to put it:
 
