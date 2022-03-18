@@ -122,6 +122,6 @@ If you remember the `summonItem` example, it also accesses a variable (`broomsti
 
 ### References
 
-- [javascript.info](https://javascript.info/closure) was my main resource while writing this article, and the quotations are taken from there. It also has great visuals to help you understand Lexical Environments better.
-- [MDN article for closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures). Because, what's a resources section without MDN?
-- [Closures in 100 Seconds and Beyond](https://www.youtube.com/watch?v=vKJpN5FAeF4) for a quick take.
+- [javascript.info](https://javascript.info/closure){:target="_blank"} was my main resource while writing this article, and the quotations are taken from there. It also has great visuals to help you understand Lexical Environments better.
+- [MDN article for closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures){:target="_blank"}. Because, what's a resources section without MDN?
+- [Closures in 100 Seconds and Beyond](https://www.youtube.com/watch?v=vKJpN5FAeF4){:target="_blank"} for a quick take.
