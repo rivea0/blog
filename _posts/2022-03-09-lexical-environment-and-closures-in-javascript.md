@@ -10,13 +10,13 @@ One of those things that are beneath the surface of JavaScript is the concept of
 
 We can think of the Lexical Environment as an object that every function, even the whole script itself, has. It not only contains the local variables and their values, but also has a reference to an **outer lexical environment**. 
 
-When you create a global variable, let's say, something like this:
+When you create a variable, let's say, something like this:
 
 ```js
 let book = 'Harry Potter and the Prisoner of Azkaban';
 ```
 
-Think of the `book` as a property of the Lexical Environment, with the value `'Harry Potter and the Prisoner of Azkaban'`. Since it is inside the global Lexical Environment, the outer reference is `null`. Maybe another way to think about this is that the global Lexical Environment is the environment of the whole script, and it has not any reference to anything *outer* than itself. 
+Think of the `book` as a property of the Lexical Environment, with the value `'Harry Potter and the Prisoner of Azkaban'`. Since it is inside the global Lexical Environment now, the outer reference is `null`. Maybe another way to think about this is that the global Lexical Environment is the environment of the whole script, and it has not any reference to anything *outer* than itself. 
 
 How the global Lexical Environment behaves is different for variables and declared functions. Let's try to understand what we mean by that.
 
@@ -28,7 +28,7 @@ book = 'Harry Potter and the Prisoner of Azkaban'; // (2)
 book = 'Harry Potter and the Goblet of Fire'; // (3)
 ```
 
-What happens when the execution starts, is that the Lexical Environment knows about the variable `book`, but it is uninitialized. 
+What happens when the execution starts, is that the (global) Lexical Environment knows about the variable `book`, but it is uninitialized. 
 On line (1), `book` is now `undefined`.
 On line (2), `book` is assigned a value, `'Harry Potter and the Prisoner of Azkaban'`.
 On (3), the value of `book` is changed to `'Harry Potter and the Goblet of Fire'`.
@@ -67,9 +67,9 @@ To visualize, think of the Lexical Environment as an object with properties like
 }
 ```
 
-Also, of course, **its `outer` references `null`** because both `broomstick` and `summonItem` are global.
+Also, of course, **its `outer` references `null`** because this is the global Lexical Environment.
 
-When a function starts running, a new Lexical Environment is created. So, when we call `summonItem` (inside the `console.log`), the Lexical Environment of that call only stores `spell` having the value `'Accio'`. And, it also has its `outer` referencing the global Lexical Environment itself, which stores `broomstick` and `summonItem`, with its own `outer` referencing `null`. The lexical environment of our function call (`summonItem('Accio')`)—the **Inner Lexical Environment**— references the *outer* one, the global Lexical Environment. That is, `spell` is found locally, but to reach `broomstick`, the `outer` reference is followed, and it is found there.
+When a function starts running, a new Lexical Environment is created for it. So, when we call `summonItem` (inside the `console.log`), the Lexical Environment of that call only stores `spell` having the value `'Accio'`. And, it also has its `outer` referencing the global Lexical Environment itself, which stores `broomstick` and `summonItem`, with its own `outer` referencing `null`. The Lexical Environment of our function call (`summonItem('Accio')`)—the **Inner Lexical Environment**— references the *outer* one, the global Lexical Environment. That is, `spell` is found locally, but to reach `broomstick`, the `outer` reference is followed, and it is found there.
 
 So, it is true to say that:
 
@@ -106,11 +106,11 @@ When we call `twoToThePower` inside `console.log`, what happens is — you guess
 
 > **A variable is updated in the Lexical Environment where it lives.**
 
-Again, `start` and `count` lives inside the Lexical Environment of `powersOfTwo`. When we update `count`, it is updated there, not inside the Lexical Environment of the returned function.
+Again, `start` and `count` lives inside the Lexical Environment of `powersOfTwo`. When we update `count`, it is updated there, not inside the Lexical Environment of the returned function which we bind to `twoToThePower`.
 
-So, in the first call of `twoToThePower`, `start` is 2 and `count` is 0. In the second call, `start` is still 2, but `count` is updated and is now 1. And, it keeps being updated inside the Lexical Environment where it lives as long as we call `twoToThePower`. 
+In the first call of `twoToThePower`, `start` is 2 and `count` is 0. In the second call, `start` is still 2, but `count` is updated and is now 1. And, it keeps being updated inside the Lexical Environment where it lives (`powersOfTwo`) as long as we call `twoToThePower`. 
 
-`twoToThePower` has the "power" to access and modify the variables inside of a Lexical Environment that its `outer` references.
+So, `twoToThePower` has the "power" to access and modify the variables inside of a Lexical Environment that its `outer` references.
 
 This is what *closures* are about, a function that has access to its `outer` scope.
 
@@ -122,6 +122,6 @@ If you remember the `summonItem` example, it also accesses a variable (`broomsti
 
 ### References
 
-- [javascript.info](https://javascript.info/closure) was my main resource while writing this article, also the quotations are taken from there. It also has great visuals to help you understand Lexical Environments better.
+- [javascript.info](https://javascript.info/closure) was my main resource while writing this article, and the quotations are taken from there. It also has great visuals to help you understand Lexical Environments better.
 - [MDN article for closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures). Because, what's a resources section without MDN?
 - [Closures in 100 Seconds and Beyond](https://www.youtube.com/watch?v=vKJpN5FAeF4) for a quick take.
