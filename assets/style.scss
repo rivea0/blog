@@ -61,6 +61,11 @@ h1 {
   }
 }
 
+
+h1:hover:not(.site-name) {
+  text-decoration: $blueViolet underline;
+}
+
 h2 {
   font-size: 24px;
 }
@@ -186,6 +191,18 @@ a {
   &:hover, &:active {
     color: #00a3a3;
   }
+}
+
+h1 a:hover {
+  color: $blueViolet;
+}
+
+nav a:hover {
+  color: $blueViolet;
+}
+
+i:hover {
+  color: $blueViolet;
 }
 
 ul, ol {
