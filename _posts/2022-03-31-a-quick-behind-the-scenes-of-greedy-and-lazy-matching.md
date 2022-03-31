@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A Quick Behind the Scenes of Greedy and Lazy Matching
-categories: Regex, JavaScript
+categories: [Regex, JavaScript]
 ---
 
 Regular expressions can be a bit of a nightmare — if you encounter them for the first time.
