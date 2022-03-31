@@ -95,4 +95,4 @@ _One said: <mark>"The flag is moving."</mark> The other said: <mark>"The wind is
 
 Finally, we've got the result we wanted and are now happy — thanks to understanding the difference between greedy and lazy matching.
 
-**Note**: If you're not satisfied with the koan example and still confused, here is a shorter and simpler explanation: https://stackoverflow.com/a/2301298.
+**Note**: If you're not satisfied with the koan example and still confused, here is a shorter and simpler explanation: [https://stackoverflow.com/a/2301298](https://stackoverflow.com/a/2301298).
