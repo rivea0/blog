@@ -8,7 +8,7 @@ Regular expressions can be a bit of a nightmare — if you encounter them for th
 
 That was what I used to think as well, before I eventually started to like them. You could sense the power of regular expressions, and they seemed to be ubiquitous — they show up in all kinds of places, and you know that there is no escaping from a regular expression (or, a regex). And, one of the things you would keep hearing on your encounters is the concept of a _greedy_ versus _lazy_ matching. Just when you think you finally grasp them somehow, they might seem to be those mysterious concepts once again a week later. So, let's see what is happening here.
 
-Let's say we have a string: `'One said: "The flag is moving." The other said: "The wind is moving." They argued but could not agree.'`. (If you're not familiar with the [koan](https://en.wikipedia.org/wiki/Koan) — _not the wind, not the flag; [mind is moving](https://en.wikisource.org/wiki/The_Gateless_Gate/Not_The_Wind,_Not_The_Flag)_.) 
+Let's say we have a string: `'One said: "The flag is moving." The other said: "The wind is moving." They argued but could not agree.'`. (If you're not familiar with the [koan](https://en.wikipedia.org/wiki/Koan){:target="_blank"} — _not the wind, not the flag; [mind is moving](https://en.wikisource.org/wiki/The_Gateless_Gate/Not_The_Wind,_Not_The_Flag){:target="_blank"}_.) 
 
 What we want to do is to match each of the quoted sentences: `"The flag is moving."` and `"The wind is moving."`. Using JavaScript, the first thing comes to mind is to perhaps use something like this regex to get a match:
 
@@ -95,4 +95,4 @@ _One said: <mark>"The flag is moving."</mark> The other said: <mark>"The wind is
 
 Finally, we've got the result we wanted and are now happy — thanks to understanding the difference between greedy and lazy matching.
 
-**Note**: If you're not satisfied with the koan example and still confused, here is a shorter and simpler explanation: [https://stackoverflow.com/a/2301298](https://stackoverflow.com/a/2301298).
+**Note**: If you're not satisfied with the koan example and still confused, here is a shorter and simpler explanation: [https://stackoverflow.com/a/2301298](https://stackoverflow.com/a/2301298){:target="_blank"}.
