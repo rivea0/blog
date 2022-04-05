@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Solving the Problem Sets of CS50's Introduction to Programming with Python — One at a Time &#58; Problem Set 0
+title: Solving the Problem Sets of CS50's Introduction to Programming with Python — One at a Time&#58; Problem Set 0
 categories: [Miscellaneous, Python]
 ---
 
@@ -58,8 +58,8 @@ main() # EXPECTO PATRONUM!
 And similarly in this problem, we have to split the implementation using a `convert` function to convert emoticons to emojis, and a `main` function to call `convert` inside of it.
 
 ## Einstein
-This [problem set](https://cs50.harvard.edu/python/2022/psets/0/einstein/){:target="_blank"} uses Einstein's mass-energy equivalence formula $E = mc^2$. For a given mass, we need to output the energy in Joules. 
-$c$ in the formula, is the constant speed of light that is measured approximately as 300000000 (meters per second). The main thing to do is to plug in the variables to their equivalents in the formula, but one thing to remember is how the `ìnput` function works. Because, in this problem we do not mostly do operations with `str` types this time, but rather with the `int` data type. So, for any kind of string in our program, [type casting](https://en.wikipedia.org/wiki/Type_conversion){:target="_blank"} is a helpful thing to do as we only want integers. For example:
+This [problem set](https://cs50.harvard.edu/python/2022/psets/0/einstein/){:target="_blank"} uses Einstein's mass-energy equivalence formula `E = mc^2`. For a given mass, we need to output the energy in Joules. 
+`c` in the formula, is the constant speed of light that is measured approximately as 300000000 (meters per second). The main thing to do is to plug in the variables to their equivalents in the formula, but one thing to remember is how the `ìnput` function works. Because, in this problem we do not mostly do operations with `str` types this time, but rather with the `int` data type. So, for any kind of string in our program, [type casting](https://en.wikipedia.org/wiki/Type_conversion){:target="_blank"} is a helpful thing to do as we only want integers. For example:
 
 ```python
 # This would not work
@@ -83,4 +83,4 @@ I do not want to give away too much, because the crux of these problems is that 
 
 We will see what the next problem set will bring. 
 
-Until then, happy coding 💜.
+Until then, happy coding. 💜
