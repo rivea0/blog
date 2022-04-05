@@ -59,7 +59,7 @@ And similarly in this problem, we have to split the implementation using a `conv
 
 ## Einstein
 This [problem set](https://cs50.harvard.edu/python/2022/psets/0/einstein/){:target="_blank"} uses Einstein's mass-energy equivalence formula `E = mc^2`. For a given mass, we need to output the energy in Joules. 
-`c` in the formula, is the constant speed of light that is measured approximately as 300000000 (meters per second). The main thing to do is to plug in the variables to their equivalents in the formula, but one thing to remember is how the `ìnput` function works. Because, in this problem we do not mostly do operations with `str` types this time, but rather with the `int` data type. So, for any kind of string in our program, [type casting](https://en.wikipedia.org/wiki/Type_conversion){:target="_blank"} is a helpful thing to do as we only want integers. For example:
+`c` in the formula, is the constant speed of light that is measured approximately as 300000000 (meters per second). The main thing to do is to plug in the variables to their equivalents in the formula, but one thing to remember is how the `input` function works. Because, in this problem we do not mostly do operations with `str` types this time, but rather with the `int` data type. So, for any kind of string in our program, [type casting](https://en.wikipedia.org/wiki/Type_conversion){:target="_blank"} is a helpful thing to do as we only want integers. For example:
 
 ```python
 # This would not work
@@ -72,7 +72,7 @@ year = int('2022')
 print(year - 22) # 2000
 ```
 
-Perhaps, why the `ìnt` type is great and not a slight headache like `float`s can be appreciated more in later problem sets.
+Perhaps, why the `int` type is great and not a slight headache like `float`s can be appreciated more in later problem sets.
 
 ## Tip Calculator
 The last [problem](https://cs50.harvard.edu/python/2022/psets/0/tip/){:target="_blank"} is mostly done, only the remaining two functions are waiting for us to be implemented. 
