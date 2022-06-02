@@ -70,7 +70,7 @@ class HogwartsEssay:
         self.words_written = 0
 
     def __str__(self):
-        return f'Number of words written: {words_written}'
+        return f'Number of words written: {self.words_written}'
 
     def add_words(self, number_of_words_to_add):
         ...
@@ -80,9 +80,9 @@ class HogwartsEssay:
 
     @property
     def word_limit(self):
-        return _word_limit
+        return self._word_limit
 
-    @word_limit.setter:
+    @word_limit.setter
     def word_limit(self, word_limit):
         if word_limit < 0:
             raise ValueError
@@ -90,7 +90,7 @@ class HogwartsEssay:
 
     @property
     def words_written(self):
-        return _words_written
+        return self._words_written
 
     @words_written.setter
     def words_written(self, words_written):
