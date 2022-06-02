@@ -14,7 +14,7 @@ For [the first problem](https://cs50.harvard.edu/python/2022/psets/8/seasons/){:
 Many hints are given for this problem, but let's take a look. For starters, we want our code to be more modular this week as we learn to appreciate the importance of [modularity](https://en.wikipedia.org/wiki/Modularity){:target="_blank"} in programming. The things that we need to do, is to get an input (in the `YYYY-MM-DD` format), convert the input to a date object, calculate the difference of days between that given date and today, convert days to minutes, and finally convert minutes to words. Well, it may seem like a lot, but thinking this way actually makes our job easier. 
 First, as always we can _try_ to get an input, and if we have a `ValueError`, we can _exit_ the program with a string like `Invalid date` which will result in an exit status of 1. If we type `help(sys.exit)` to get information from the documentation in this case, it literally tells you that:
 
-```python
+```
 Help on built-in function exit in module sys:
 
 exit(status=None, /)
