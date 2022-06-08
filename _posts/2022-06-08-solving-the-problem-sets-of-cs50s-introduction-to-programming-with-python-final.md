@@ -95,8 +95,8 @@ def add(n, n1):
 
 The conventions on how to use docstrings can be found here in [this PEP](https://peps.python.org/pep-0257/){:target="_blank"}.
 
-## argsparse
-`argsparse` is a [module](https://docs.python.org/3/library/argparse.html){:target="_blank"} that comes built-in with Python, literally a "parser for command-line options, arguments and sub-commands". 
+## argparse
+`argparse` is a [module](https://docs.python.org/3/library/argparse.html){:target="_blank"} that comes built-in with Python, literally a "parser for command-line options, arguments and sub-commands". 
 
 There is a [great tutorial](https://docs.python.org/3/howto/argparse.html#id1){:target="_blank"} on the official documentation already, so, we are not going to dive deep into it here. The simplest thing you can do might look like this. Say, we have a file called `spell.py`, and we want to pass in the argument `-s` to our program to indicate the type of spell we want to create. We want the proper incantation printed on our terminal. Let's see:
 
